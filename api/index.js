@@ -9,10 +9,12 @@ const helmet = require("helmet");
 const morgan = require("morgan");
 const multer = require("multer");
 const path = require("path");
+var cors = require('cors')
 
 dotenv.config();
 
 //middleware
+app.use(cors())
 app.use(express.json());
 app.use(helmet());
 app.use(morgan("common"));
