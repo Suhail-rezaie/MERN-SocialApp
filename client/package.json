@@ -43,5 +43,5 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "http://localhost:3500/api"
+  "proxy": "https://mern-social-app-3b29.vercel.app"
 }
