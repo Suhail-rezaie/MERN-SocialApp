@@ -9,7 +9,7 @@ const helmet = require("helmet");
 const morgan = require("morgan");
 const multer = require("multer");
 const path = require("path");
-var cors = require('cors')
+const cors = require('cors')
 
 dotenv.config();
 
