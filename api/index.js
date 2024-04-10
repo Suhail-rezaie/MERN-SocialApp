@@ -23,10 +23,10 @@ mongoose.connect(process.env.URL).then(() => {
   console.log("connected to DB");
 });
 
-app.use((req, res, next) => {
-  res.setHeader("Access-Control-Allow-Origin", "*");
-  next();
-});
+// app.use((req, res, next) => {
+//   res.setHeader("Access-Control-Allow-Origin", "*");
+//   next();
+// });
 
 app.use("/images", express.static(path.join(__dirname, "public/images")));
 
