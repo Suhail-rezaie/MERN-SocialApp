@@ -33,6 +33,7 @@ export default function Login() {
 
             <input
               ref={password}
+              type="password"
               placeholder="Password"
               className="loginInput"
             />

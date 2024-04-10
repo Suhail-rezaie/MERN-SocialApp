@@ -43,5 +43,5 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "https://mern-social-app-api-hazel.vercel.app/"
+  "proxy": "https://mern-social-app-api-hazel.vercel.app"
 }

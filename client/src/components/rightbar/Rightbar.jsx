@@ -31,9 +31,12 @@ export default function Rightbar({ user }) {
     };
     getFriends();
 
-    if (currentUser.followings.includes(user?._id)) {
+    if (currentUser && currentUser.followings && currentUser.followings.includes(user?._id)) {
+      // Your code here
       setFollowed(true);
     }
+    
+   
   }, [currentUser, user]);
 
   // useEffect(() => {

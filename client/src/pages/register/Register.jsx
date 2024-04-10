@@ -21,7 +21,9 @@ export default function Register() {
       };
       try {
         await axios.post("/auth/register", user);
-      } catch (err) {}
+      } catch (err) {
+        console.log(err);
+      }
     }
   };
 
@@ -43,13 +45,14 @@ export default function Register() {
             />
             <input placeholder="Email" ref={email} className="loginInput" />
             <input
-              type={password}
+              type="password"
               placeholder="Password"
               ref={password}
               className="loginInput"
             />
             <input
-              type={password}
+             
+              type="password"
               placeholder="Password Again"
               ref={passwordAgain}
               className="loginInput"
