@@ -13,28 +13,8 @@ const cors = require('cors')
 
 dotenv.config();
 
-
-const whitelist = ['https://mern-social-app-ui.vercel.app'];
-
-
-
-
-// Define CORS options
-const corsOptions = {
-  origin: function (origin, callback) {
-    if (whitelist.includes(origin)) {
-      callback(null, true);
-    } else {
-      callback(new Error('Not allowed by CORS'));
-    }
-  },
-};
-
-// Use CORS middleware with the defined options
-
 //middleware
-// app.use(cors())
-app.use(cors(corsOptions));
+app.use(cors())
 app.use(express.json());
 app.use(helmet());
 app.use(morgan("common"));
@@ -43,10 +23,7 @@ mongoose.connect(process.env.URL).then(() => {
   console.log("connected to DB");
 });
 
-// app.use((req, res, next) => {
-//   res.setHeader("Access-Control-Allow-Origin", "*");
-//   next();
-// });
+
 
 app.use("/images", express.static(path.join(__dirname, "public/images")));
 
