@@ -20,7 +20,7 @@ export default function Register() {
         password: password.current.value,
       };
       try {
-        await axios.post("https://mern-social-app-api-hazel.vercel.app/auth/register", user);
+        await axios.post("https://mern-social-app-api-hazel.vercel.app/api/auth/register", user);
       } catch (err) {
         console.log(err);
       }
