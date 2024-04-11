@@ -15,6 +15,10 @@ dotenv.config();
 
 //middleware
 app.use(cors())
+app.use(cors({
+  origin: 'https://mern-social-app-ui.vercel.app'
+}));
+
 app.use(express.json());
 app.use(helmet());
 app.use(morgan("common"));
